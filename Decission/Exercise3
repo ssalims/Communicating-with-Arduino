@@ -1,0 +1,29 @@
+int Marks = 95;
+char Grade;
+
+void setup() {
+ Serial.begin(9600);
+
+if (Marks <= 33){
+ Grade = 'E';
+ }
+ else if (Marks <= 40){
+ Grade = 'D';
+ }
+ else if (Marks <= 60){
+ Grade = 'C';
+ }
+ else if (Marks <= 80){
+ Grade = 'B';
+ }
+ else if (Marks <= 100){
+ Grade = 'A';
+ }
+
+Serial.print("Your grade is: ");
+ Serial.println(Grade);
+}
+
+void loop() {
+
+}
