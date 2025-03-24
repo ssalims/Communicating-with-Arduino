@@ -1,0 +1,26 @@
+//https://ai.thestempedia.com/docs/evive/evive-arduino-ide-tutorials/arduino-ide-conditionalif-else-if-statements/
+//Exam Marks
+//
+int Student1_Marks = 92;
+int Student2_Marks = 20;
+
+void setup() {
+ Serial.begin(9600);
+ 
+ if (Student1_Marks > 33){
+ Serial.println("The student1 marks is greater than 33. He passed the exam.");
+ }
+ if (Student1_Marks <= 33){ 
+ Serial.println("The student1 marks is less than or eqaul to 33. He failed the exam."); } 
+ 
+ if (Student2_Marks > 33){
+ Serial.println("The student2 marks is greater than 33. He passed the exam.");
+ }
+ if (Student2_Marks <= 33){
+ Serial.println("The student2 marks is less than or eqaul to 33. He failed the exam.");
+ }
+}
+
+void loop() {
+ 
+}
