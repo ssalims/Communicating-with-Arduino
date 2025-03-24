@@ -1,3 +1,84 @@
+//////////////////////////////////////////////////////////////////
+//EXAMPLE 1
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+  
+    if (Serial.available() > 0) { // Check if data is available
+        char received = Serial.read(); // Read one character
+        Serial.print("Received: ");
+        //received=received+1;
+        Serial.println(received);
+    }
+}
+
+//----------------------------------------------------------------
+//////////////////////////////////////////////////////////////////
+//EXAMPLE 2
+int a;
+int b;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.println("Enter the First number");
+  while(!Serial.available()); // wait till the user has entered something
+  a = Serial.parseInt(); // treat what the user has entered as an Integer and read the whole number
+  Serial.println("Enter the second number");
+  while(!Serial.available());
+  b = Serial.parseInt();
+  Serial.println(a+b); // Print the sum
+}
+
+//----------------------------------------------------------------
+//////////////////////////////////////////////////////////////////
+//EXAMPLE 3
+//ASCII (American Standard Code for Information Interchange)
+int incomingByte = 0; // for incoming serial data
+
+void setup() {
+  Serial.begin(9600); // opens serial port, sets data rate to 9600 bps
+}
+
+void loop() {
+  // reply only when you receive data:
+  if (Serial.available() > 0) {
+    // read the incoming byte:
+    incomingByte = Serial.read();
+
+    // say what you got:
+    Serial.print("I received: ");
+    Serial.println(incomingByte, DEC);
+  }
+}
+
+
+//----------------------------------------------------------------
+//////////////////////////////////////////////////////////////////
+//EXAMPLE 4
+//ASCII (American Standard Code for Information Interchange)
+void setup(){
+    Serial.begin(9600);
+}
+
+void loop(){
+    if(Serial.available()){
+      int t = Serial.read();
+      Serial.println(t);
+      }
+}
+
+
+//----------------------------------------------------------------
+//////////////////////////////////////////////////////////////////
+//EXAMPLE 5
+
 void setup() {
       Serial.begin(9600);
     }
