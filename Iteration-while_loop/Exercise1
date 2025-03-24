@@ -1,0 +1,13 @@
+int i = 0;
+
+void setup() {
+ Serial.begin(9600);
+ while (i < 10) {
+ Serial.print("Value of i is: ");
+ Serial.println(i);
+ i++;
+ }
+}
+
+void loop() {
+}
