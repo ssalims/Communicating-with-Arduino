@@ -1,0 +1,12 @@
+//EXAMPLE 4
+//ASCII (American Standard Code for Information Interchange)
+void setup(){
+    Serial.begin(9600);
+}
+
+void loop(){
+    if(Serial.available()){
+      int t = Serial.read();
+      Serial.println(t);
+      }
+}
